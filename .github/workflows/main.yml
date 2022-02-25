@@ -15,7 +15,7 @@ jobs:
       - name: Scripts
         run: |
           docker build -t app .
-          echo ${{ secrets.DOCKER_SECRET }} | docker login -u ${{ secrets.DOCKER_USER }} --stdin-password 
+          echo ${{ secrets.DOCKER_SECRET }} | docker login -u ${{ secrets.DOCKER_USER }} --password-stdin 
           docker tag app itsmaheshkariya/test
           docker push itsmaheshkariya/test
           
