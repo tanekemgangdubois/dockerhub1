@@ -18,5 +18,5 @@ jobs:
           docker build -t app .
           echo ${{ secrets.DOCKER_SECRET }} | docker login -u ${{ secrets.DOCKER_USER }} --password-stdin 
           docker tag app ovdi/dockerhub1
-          docker push ovdi/dockerhub1
+          docker push ovdi/dockerhub1:001
           
